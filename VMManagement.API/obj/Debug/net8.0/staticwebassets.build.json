@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3YraMede/DpvGBN1yIXvVrGtdfQzNLWHHiJnOSJ4AX4=",
+  "Source": "VMManagement.API",
+  "BasePath": "_content/VMManagement.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
