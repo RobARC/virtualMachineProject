@@ -1,0 +1,35 @@
+<div class="container">
+    
+    <h4>Maquinas Virtuales</h4> 
+
+    <p *ngIf="!(maquinas && maquinas.length)">
+        No hay máquinas virtuales para mostrar
+    </p>
+    <table class="table" *ngIf="(maquinas && maquinas.length)">
+        <thead>
+                <th>id</th>
+                <th>name</th>
+                <th>cores</th>
+                <th>ram</th>
+                <th>disk</th>
+                <th>os</th>
+                <th>status</th>
+        </thead>
+        <tbody>
+           <!--Revisar porque no se llenan los datos--> 
+            <tr *ngFor="let item of maquinas">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.cores}}</td>
+                <td>{{item.ram}}</td>
+                <td>{{item.disk}}</td>
+                <td>{{item.os}}</td>
+                <td>{{item.status}}</td>
+                <td *ngIf="rol == 'admin'">
+                    <button class="btn btn-warning" [routerLink]='["/maquinas-edit/" + item.id]' >Editar</button>
+                    <button class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
